@@ -1,0 +1,61 @@
+services:
+  nginx:
+    container_name: nginx
+    restart: unless-stopped
+    image: nginx
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - staticfiles-volume:/static
+    depends_on:
+      backend:
+        condition: service_started
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend
+    ports:
+      - 8000:8000
+    restart: unless-stopped
+    working_dir: /backend
+    command: >
+      sh -c "
+      python manage.py collectstatic --noinput &&
+      gunicorn lab1.wsgi:application --bind 0.0.0.0:8000
+      "
+    depends_on:
+      - postgres
+    volumes:
+      - ./backend:/backend
+  backend-build:
+    build:
+     context: ./backend
+     dockerfile: Dockerfile
+    image: backend
+    container_name: backend-build
+    working_dir: /backend
+    command: >
+      sh -c "
+      python manage.py migrate &&
+      python manage.py collectstatic --noinput
+      "
+    depends_on:
+      - postgres
+    volumes:
+      - ./backend:/backend
+      - staticfiles-volume:/staticfiles
+  postgres:
+    container_name: postgres
+    image: postgres:17-alpine
+    ports:
+     - 5432:5432
+    env_file:
+     - .env
+
+volumes:
+  staticfiles-volume:

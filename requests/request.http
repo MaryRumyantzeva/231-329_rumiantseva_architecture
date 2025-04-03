@@ -1,0 +1,42 @@
+@hostname = http://localhost:8000
+
+
+
+
+### запрос на Retrieve C(R)UD
+GET {{hostname}}/book/2009
+Content-Type: application/json
+
+### запрос на Retrieve C(R)UD
+GET {{hostname}}/book
+Content-Type: application/json
+
+
+
+### запрос на Create (C)RUD
+POST {{hostname}}/book
+Content-Type: application/json
+
+{
+    "author": "Maria",
+    "year": "2025-03-14",
+    "genre": "spotify",
+    "count": 14,
+    "is_available": true
+}
+
+
+
+### запрос на Delete CRU(D)
+DELETE {{hostname}}/book/2012
+Content-Type: application/json
+
+
+
+### запрос на Patch CR(U)D
+PATCH {{hostname}}/book/2011
+Content-Type: application/json
+
+{
+    "count": 10
+}
