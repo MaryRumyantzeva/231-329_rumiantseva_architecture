@@ -4,7 +4,7 @@
 
 
 ### запрос на Retrieve C(R)UD
-GET {{hostname}}/book/2009
+GET {{hostname}}/book/60
 Content-Type: application/json
 
 ### запрос на Retrieve C(R)UD
