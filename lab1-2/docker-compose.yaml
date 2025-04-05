@@ -19,8 +19,8 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     container_name: backend
-    ports:
-      - 8000:8000
+    # ports:
+    #   - 8000:8000
     restart: unless-stopped
     working_dir: /backend
     command: >
