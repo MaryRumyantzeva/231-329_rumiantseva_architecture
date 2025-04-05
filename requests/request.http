@@ -1,6 +1,8 @@
 @hostname = http://localhost:8000
 
 
+
+
 ### запрос на Retrieve C(R)UD
 GET {{hostname}}/book/60
 Content-Type: application/json
