@@ -1,0 +1,26 @@
+# ninja log v6
+20	963	7656572444916777	BookParser_autogen/timestamp	a9e2ef3836aba9c4
+20	963	7656572444916777	BookParser_autogen/mocs_compilation.cpp	a9e2ef3836aba9c4
+20	963	7656572444916777	C:/Users/rumya/architecture/lab3/BookParser/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/BookParser_autogen/timestamp	a9e2ef3836aba9c4
+20	963	7656572444916777	C:/Users/rumya/architecture/lab3/BookParser/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/BookParser_autogen/mocs_compilation.cpp	a9e2ef3836aba9c4
+723	3583	7656562724416793	CMakeFiles/BookParser.dir/BookParser_autogen/mocs_compilation.cpp.obj	d532aac52157aa77
+727	3417	7656562724445864	CMakeFiles/BookParser.dir/main.cpp.obj	7cded8578bc89030
+2587	2884	7656568193481946	BookParser.exe	f3663e378f0b18d8
+767	3657	7656552574338642	CMakeFiles/BookParser.dir/book.cpp.obj	99905d7524f5e960
+5	33	7656550978142444	CMakeFiles/clean.additional	baedbe210acaa455
+33	44	7656550978418512	clean	577b940aee94fbd7
+3	912	7656573772988883	build.ninja	c3419cdc2131e21a
+700	3244	7656561361142014	CMakeFiles/BookParser.dir/networkmanager.cpp.obj	b43e8381a3d64f4b
+147	2586	7656568169084026	CMakeFiles/BookParser.dir/mainwindow.cpp.obj	6bc62e2e63f4f4f0
+17	770	7656573831305430	BookParser_autogen/timestamp	a9e2ef3836aba9c4
+17	770	7656573831305430	BookParser_autogen/mocs_compilation.cpp	a9e2ef3836aba9c4
+17	770	7656573831305430	C:/Users/rumya/architecture/lab3/BookParser/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/BookParser_autogen/timestamp	a9e2ef3836aba9c4
+17	770	7656573831305430	C:/Users/rumya/architecture/lab3/BookParser/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/BookParser_autogen/mocs_compilation.cpp	a9e2ef3836aba9c4
+775	4076	7656573832032627	CMakeFiles/BookParser.dir/main.cpp.obj	7cded8578bc89030
+771	4151	7656573831993565	CMakeFiles/BookParser.dir/BookParser_autogen/mocs_compilation.cpp.obj	d532aac52157aa77
+18	208	7656574026145903	BookParser_autogen/timestamp	a9e2ef3836aba9c4
+18	208	7656574026145903	BookParser_autogen/mocs_compilation.cpp	a9e2ef3836aba9c4
+18	208	7656574026145903	C:/Users/rumya/architecture/lab3/BookParser/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/BookParser_autogen/timestamp	a9e2ef3836aba9c4
+18	208	7656574026145903	C:/Users/rumya/architecture/lab3/BookParser/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/BookParser_autogen/mocs_compilation.cpp	a9e2ef3836aba9c4
+209	3161	7656574028062217	CMakeFiles/BookParser.dir/mainwindow.cpp.obj	6bc62e2e63f4f4f0
+3161	3498	7656574057587239	BookParser.exe	f3663e378f0b18d8
