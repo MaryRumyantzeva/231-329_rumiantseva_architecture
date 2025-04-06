@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "networkmanager.h"
+#include "book.h"
 #include <QVBoxLayout>
 #include <QJsonDocument>
 #include <QJsonObject>
@@ -39,22 +40,21 @@ void MainWindow::handleReply(QNetworkReply *reply) {
 
         QString output;
 
-        if (doc.isObject()) {
-            QJsonObject obj = doc.object();
-            for (const QString &key : obj.keys()) {
-                output += QString("%1: %2\n").arg(key, obj.value(key).toVariant().toString());
-            }
-        } else if (doc.isArray()) {
+        if (doc.isArray()) {
             QJsonArray array = doc.array();
+            QList<Book> books;
+
             for (const QJsonValue &val : array) {
                 if (val.isObject()) {
                     QJsonObject obj = val.toObject();
-                    for (const QString &key : obj.keys()) {
-                        output += QString("%1: %2\n").arg(key, obj.value(key).toVariant().toString());
-                    }
-                    output += "\n";
+                    Book book = Book::fromJson(obj);
+                    books.append(book);
+                    output += book.toString() + "\n";
                 }
             }
+        } else if (doc.isObject()) {
+            Book book = Book::fromJson(doc.object());
+            output += book.toString();
         }
 
         textEdit->setText(output);
@@ -62,5 +62,6 @@ void MainWindow::handleReply(QNetworkReply *reply) {
     } else {
         textEdit->setText("Error: " + reply->errorString());
     }
+
     reply->deleteLater();
 }

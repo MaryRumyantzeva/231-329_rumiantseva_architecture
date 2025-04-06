@@ -279,6 +279,12 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/rumya/architecture/lab3/BookParser/book.h",
+			"MU",
+			"EWIEGA46WW/moc_book.cpp",
+			null
+		],
+		[
 			"C:/Users/rumya/architecture/lab3/BookParser/inetworkadapter.h",
 			"MU",
 			"EWIEGA46WW/moc_inetworkadapter.cpp",

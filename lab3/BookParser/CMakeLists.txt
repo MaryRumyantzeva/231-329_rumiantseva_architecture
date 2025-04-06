@@ -20,6 +20,7 @@ add_executable(BookParser
   mainwindow.h
   networkmanager.cpp
   networkmanager.h
+  book.h
 
   networkmanageradapter.h
   inetworkadapter.h

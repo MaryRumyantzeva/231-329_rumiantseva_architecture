@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-7fe8c3a4f00eb51a22e7.json",
+					"jsonFile" : "directory-.-Debug-3d937cb5f715a9109e22.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "BookParser::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-BookParser-Debug-249e5723f7de5f066e6d.json",
+					"jsonFile" : "target-BookParser-Debug-661a726a30892487ad83.json",
 					"name" : "BookParser",
 					"projectIndex" : 0
 				},
