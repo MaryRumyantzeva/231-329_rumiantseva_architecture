@@ -19,8 +19,6 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     container_name: backend
-    # ports:
-    #   - 8000:8000
     restart: unless-stopped
     working_dir: /backend
     command: >
@@ -45,7 +43,8 @@ services:
       python manage.py collectstatic --noinput
       "
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
     volumes:
       - ./backend:/backend
       - staticfiles-volume:/staticfiles
@@ -56,6 +55,16 @@ services:
      - 5432:5432
     env_file:
      - .env
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready --username=${POSTGRES_USER} --dbname=${POSTGRES_DB}"]
+      interval: 1s
+      timeout: 1s
+      retries: 10
+    volumes:
+      - postgres-volume:/var/lib/postgresql/data
+
 
 volumes:
   staticfiles-volume:
+  postgres-volume:
+
